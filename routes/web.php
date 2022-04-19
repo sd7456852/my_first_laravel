@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\NewController;
 use App\Http\Controllers\ShoppingCarController;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,9 +19,12 @@ use App\Http\Controllers\ShoppingCarController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/index', function () {
-    return view('Bootstrap index');
-});
+
+// Route::get('/index', function () {
+//     return ('ShoppingCarController');
+// });
+Route::get('/index', [ShoppingCarController::class, 'index']);
+
 Route::get('/login', function () {
     return view('Bootstrap login');
 });
@@ -36,6 +40,13 @@ Route::get('/page3', function () {
 Route::get('/page4', function () {
     return view('Bootstrap shopping car page4');
 });
+Route::get('/comment', function () {
+    return view('comment.comment');
+});
+Route::get('/comment1', function (Request $request) {
+    dd($request->all());
+});
+
 
 
 

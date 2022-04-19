@@ -3,18 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ShoppingCarController extends Controller
 {
     public function index(){
 
 
-        $data1 = DB::table('news'); //前三行
-        $data2 = DB::table('news');//後三行
-        $data3 = DB::table('news');//隨機三行
-
-        dd($data1,$data2,$data3);
-
-        return view('Bootstrap index');
+        $data1 = DB::table('intro1')->get();
+        // dd($data1);
+        return view('Bootstrap index', compact('data1'));
     }
 }

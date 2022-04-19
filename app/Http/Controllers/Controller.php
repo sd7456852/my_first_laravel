@@ -6,6 +6,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Http\Request;
 
 class Controller extends BaseController
 {
@@ -14,4 +15,11 @@ class Controller extends BaseController
         return view('micosoft-p');
     }
 
+//     public function Get(Request $request){
+
+//         {
+//             $comment = $request->input('comment.comment');
+//         }
+
+// }
 }

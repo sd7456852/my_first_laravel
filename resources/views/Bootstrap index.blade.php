@@ -240,17 +240,23 @@
     <section id="intro">
         <div class="container-xxl py-5 px-5">
             <div class="col text-center py-5">
-                <h1>Raw Denim Heirloom Man Braid</h1>
+                <h1>{{ $data1[0]->title }}</h1>
                 <p>Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice
                     poutine, ramps microdosing banh mi pug.</p>
             </div>
             <div class="row d-flex text-center">
                 <div class="card" style="width: 33.33%;">
                     <div class="img">
-                        <img src="/pulse.png" class="card-img-top" alt="...">
+                        <img src="
+                        @if ($data1[1]->img == "" || $data1[1]->img == null) 
+                        {{ asset('img/twitter.svg') }}
+                        @else
+                        {{ $data1[1]->img }}
+                        @endif"
+                        class="card-img-top" alt="...">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Shooting Stars</h5>
+                        <h5 class="card-title">{{ $data1[1]->title }}</h5>
                         <p class="card-text">Blue bottle crucifix vinyl post-ironic four dollar toast vegan
                             taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.
                         </p>
@@ -259,10 +265,16 @@
                 </div>
                 <div class="card" style="width: 33.33%;">
                     <div class="img">
-                        <img src="/scissors.png" class="card-img-top" alt="...">
+                        <img src="
+                        @if ($data1[2]->img == "" || $data1[2]->img == null) 
+                        {{ asset('img/twitter.svg') }}
+                        @else
+                        {{ $data1[2]->img }}
+                        @endif" class="card-img-top" alt="...">
+                        
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">The Catalyzer</h5>
+                        <h5 class="card-title">{{ $data1[2]->title }}</h5>
                         <p class="card-text">Blue bottle crucifix vinyl post-ironic four dollar toast vegan
                             taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.
                         </p>
@@ -271,10 +283,15 @@
                 </div>
                 <div class="card" style="width: 33.33%;">
                     <div class="img">
-                        <img src="/user.png" class="card-img-top" alt="...">
+                        <img src="
+                        @if ($data1[3]->img == "" || $data1[3]->img == null) 
+                        {{ asset('img/twitter.svg') }}
+                        @else
+                        {{ $data1[3]->img }}
+                        @endif" class="card-img-top" alt="...">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Neptune</h5>
+                        <h5 class="card-title">{{ $data1[3]->title }}</h5>
                         <p class="card-text">Blue bottle crucifix vinyl post-ironic four dollar toast vegan
                             taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.
                         </p>
