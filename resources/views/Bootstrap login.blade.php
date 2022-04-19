@@ -2,8 +2,10 @@
 @section('title')
 @endsection
 @section('css')
+
     <style>
-        #login {
+
+        #login{
             height: 100vh;
             position: relative;
         }
@@ -93,7 +95,7 @@
         </div>
         <div class="form w-50 d-flex flex-column justify-content-center align-items-center">
             <div class="title d-flex">
-                <img src="/dr.jpg" alt="">
+                <img src={{asset('./img/dr.jpg')}} alt="">
                 <h2>數位方塊</h2>
             </div>
             <div class="social-2">
