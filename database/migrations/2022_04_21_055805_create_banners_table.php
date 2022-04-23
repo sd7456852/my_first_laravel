@@ -13,15 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('comment', function (Blueprint $table) {
+        Schema::create('banners', function (Blueprint $table) {
             $table->id();
-
-            $table->string('title')-nullable();
-            $table->string('name')-nullable();
-            $table->string('time')-nullable();
-            $table->string('content')-nullable();
-
             $table->timestamps();
+
+            $table->string('img_path')->nullable()->comment('圖片');
+            $table->float('img_opacicty')->nullable()->comment('圖片透明度');
+            $table->integer('weight')->nullable()->comment('權重');
+
+
+            
         });
     }
 
@@ -32,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comment');
+        Schema::dropIfExists('banners');
     }
 };

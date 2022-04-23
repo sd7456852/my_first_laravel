@@ -164,34 +164,11 @@
             </div>
         </div>
     @endsection
-    @section('main')
-        <section id="shooping-step01" class="pt-3 pb-3">
-            <div class="container-xxl">
-                <div class="progress d-flex flex-column p-5">
-                    {{$comments}}
-                    <h1>留言板</h1>
-                    <div class="boxs">
-                        <div class="boxs-1">
-                            <div class="mid-box">
-                                <span>標題</span>
-                            </div>
-                            <div class="small-box">
-                                <span>作者名</span>
-                                <span>發文時間</span>
-                            </div>
-                        </div>
-                        <div class="big-box">
-                            <span>嚕嚕嚕拉拉拉aaaaaaaaaaaaaaaaaaaaaaaa</span>
-                        </div>
-                    </div>
-                    <div>
-                        <a href="/comment/delete/">刪除</a>
-                        <a href="/comment/edit/">編輯</a>
-                    </div>
+    
                     <form action="/comment/save" method="get">
                         <div class="inputgrope">
                             <div class="title">
-                                <h3>歡迎留言</h3>
+                                <h3>修改留言</h3>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">姓名</label>
